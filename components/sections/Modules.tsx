@@ -14,8 +14,7 @@ const mainModules = [
     title: "Automated artist rider extraction, venue spec audits and proposal generation",
     body: "Transform complex incoming event briefs, multi-page technical riders, and venue specification packets into structured production records. AI parses backline, lighting universes, audio I/O splits, and power requirements directly into live estimates and feasibility checklists.",
     tags: [
-      "Rider & spec OCR parsing",
-      "Venue technical pack audit",
+      "Rider & spec extraction",
       "Instant bill-of-quantities",
     ],
     lean: "left" as const,
@@ -30,9 +29,8 @@ const mainModules = [
     title: "Master production timelines, load-in milestones and change ripple analysis",
     body: "Build master production schedules anchored to venue access, load-in, soundcheck, doors, and strict curfews. When an artist soundcheck or load-in slips, AI immediately maps downstream consequences across FOH, catering, security, rehearsals, and crew call times.",
     tags: [
-      "Critical-path schedule tree",
-      "Downstream change ripple engine",
-      "Dynamic curfew protection",
+      "Critical-path schedule",
+      "Curfew protection",
     ],
     lean: "right" as const,
   },
@@ -47,7 +45,6 @@ const mainModules = [
     body: "Unify department paperwork across audio input splits, DMX universes, LED video tile rasters, and rigging point loads. Automatically flags unassigned stage power drops, Dante channel conflicts, and hoist load overages before equipment leaves the warehouse.",
     tags: [
       "Rigging point load audits",
-      "Stage power distribution",
       "Audio & DMX patch manager",
     ],
     lean: "left" as const,
@@ -62,8 +59,7 @@ const mainModules = [
     title: "Intelligent crew matching, call sheets and IATSE collective bargaining guardrails",
     body: "Schedule department heads, certified high-riggers, and local stagehand rosters with automated skill matching. Built-in compliance algorithms monitor call times, 5-hour meal windows, and mandatory 8-hour continuous rest turnaround periods to eliminate expensive union penalties.",
     tags: [
-      "AI skill & rate matching",
-      "Meal penalty & overtime warnings",
+      "Union overtime alarms",
       "Digital call sheet dispatch",
     ],
     lean: "right" as const,
@@ -80,7 +76,6 @@ const mainModules = [
     tags: [
       "Dock conflict resolution",
       "Freight & ETA tracking",
-      "Certificate of Insurance audits",
     ],
     lean: "left" as const,
   },
@@ -96,7 +91,6 @@ const mainModules = [
     tags: [
       "Real-time cue execution",
       "Curfew recovery AI",
-      "Live variance alerts",
     ],
     lean: "right" as const,
   },
@@ -112,7 +106,6 @@ const mainModules = [
     tags: [
       "ANSI E1.21 wind protocols",
       "AHJ permit verification",
-      "Pre-show inspection checklists",
     ],
     lean: "left" as const,
   },
@@ -127,7 +120,6 @@ const mainModules = [
     body: "Reconcile production labor, rigging overtime, equipment sub-rentals, and fuel costs against original contracts in real time. Generates auditable backup documentation and billing adjustments before crew disperses from the venue.",
     tags: [
       "Labor overtime audits",
-      "Margin & variance reconciliation",
       "Automated settlement exports",
     ],
     lean: "right" as const,
