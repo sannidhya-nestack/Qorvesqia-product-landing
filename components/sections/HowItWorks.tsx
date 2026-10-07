@@ -3,18 +3,18 @@ import SliderDots from "@/components/ui/SliderDots";
 const steps = [
   {
     step: "01",
-    title: "Ingest electrical packages & single-lines",
-    desc: "Feed RFPs, plan sheets, panel schedules, riser diagrams, and specifications into one workspace. AI outlines symbols, extracts equipment schedules, and flags missing scope before your team commits time or budget.",
+    title: "Ingest artist riders & technical venue specs",
+    desc: "Drop incoming artist contracts, technical riders, stage plots, and venue packets into one unified workspace. AI extracts backline requirements, lighting universes, audio I/O splits, and power specs directly into structured bills-of-quantities.",
   },
   {
     step: "02",
-    title: "Execute coordinated construction & prefab",
-    desc: "Awarded takeoff assemblies flow directly into BIM system trees, switchgear procurement need-dates, prefab shop spools, and executable foreman work packages without manual spreadsheet re-entry.",
+    title: "Coordinate stages, union crew & dock logistics",
+    desc: "Convert production timelines into dynamic master schedules. Coordinate union crew call sheets with built-in IATSE meal and rest guardrails, sequence loading dock arrivals, and detect freight clashes before load-in begins.",
   },
   {
     step: "03",
-    title: "Commission & maintain installed assets",
-    desc: "Verify upstream energization dependencies, compile audit-ready turnover packages automatically, and monitor live switchgear, transformers, and panels under NFPA 70B predictive maintenance programs.",
+    title: "Execute live show cues & automate financial closeout",
+    desc: "Call cues live with real-time delay mitigation and strict curfew protection. Reconcile labor overtime, gear rentals, and final show settlements automatically before the tour heads to the next venue.",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function HowItWorks() {
         <div className="max-w-[46ch]">
           <span className="eyebrow">How It Works</span>
           <h2 className="h-section mt-5 text-[clamp(1.9rem,3.6vw,3rem)] text-[var(--ink)]">
-            Your electrical workflow, from bid to building maintenance.
+            Your live production workflow, from intake to post-show settlement.
           </h2>
         </div>
 

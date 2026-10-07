@@ -10,8 +10,8 @@ import { PRODUCT } from "@/lib/product";
 const strip = [
   { src: "/assets/switchboard-programming.jpg", label: "Lighting & Show Control Programming" },
   { src: "/assets/overhead-cable-install.jpg", label: "Stage Truss & Rigging Installation" },
-  { src: "/assets/switchgear-qa-inspection.jpg", label: "Technical QA & System Commissioning" },
-  { src: "/assets/control-panel-assembly.jpg", label: "Audio Rack & Power Distribution Patching" },
+  { src: "/assets/switchgear-qa-inspection.jpg", label: "Front-of-House Audio & Lighting QA" },
+  { src: "/assets/control-panel-assembly.jpg", label: "Backline & Audio Rack Patching" },
   { src: "/assets/warehouse-material-staging.jpg", label: "AVL Gear Staging & Truck Loading" },
 ];
 
@@ -74,21 +74,19 @@ export default function Hero() {
         >
           <div className="reveal flex flex-wrap items-center gap-3">
             <span className="text-[13px] font-medium text-[var(--ink-mute)]">
-              AI-powered operating system for live event production & entertainment
+              AI-native operations platform for concerts, festivals, tours & live entertainment
             </span>
           </div>
 
           <h1 className="reveal-2 mt-7 h-display text-[var(--ink)] text-[clamp(1.7rem,6.5vw,5.3rem)]">
-            One Platform for End-to-End
+            The Connected Operating System for
             <br />
-            <span className="text-[var(--brand)]">Live Production</span> Operations
+            <span className="text-[var(--brand)]">Live Event Production</span>
           </h1>
 
           <div className="mt-8 flex flex-col gap-8">
             <p className="reveal-3 max-w-[62ch] text-[clamp(1rem,1.4vw,1.32rem)] leading-[1.55] text-[var(--ink-soft)]">
-              <strong className="font-semibold text-[var(--ink)]">{PRODUCT.name}</strong> is the connected
-              operations operating system for event producers and technical production teams —
-              synchronizing technical riders, rigging engineering, IATSE crew dispatch, equipment logistics, live cue calling, and post-event financial settlement.
+              <strong className="font-semibold text-[var(--ink)]">{PRODUCT.name}</strong> unifies the entire live entertainment lifecycle into one intelligent command center — synchronizing artist rider intake, technical stage specs, union crew dispatch, dock logistics, real-time cue calling, and post-show financial settlement without operational surprises.
             </p>
             <div className="reveal-3 flex flex-wrap items-center gap-3">
               <Link href="#contact" className="btn btn-primary">

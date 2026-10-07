@@ -87,7 +87,7 @@ export default function Onboarding() {
             Two ways to deploy — same platform, same subscription
           </h2>
           <p className="mt-3 max-w-[70ch] text-[15px] leading-[1.6] text-[var(--ink-soft)]">
-            Run {PRODUCT.name} wherever your electrical drawings, single-line diagrams, and project financials are allowed to live. The subscription price is identical either way.
+            Run {PRODUCT.name} wherever your production riders, stage specifications, and financial settlement records are allowed to live. The subscription price is identical either way.
           </p>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -101,7 +101,7 @@ export default function Onboarding() {
                   {ONBOARDING.deployment.cloud.label}
                 </h3>
                 <p className="mt-2 text-[14px] leading-[1.55] text-[var(--ink-soft)]">
-                  Runs in Nestack&rsquo;s managed cloud — nothing to provision. The fastest way to get your takeoff queues and field operations live and clearing.
+                  Runs in Nestack&rsquo;s managed cloud — nothing to provision. The fastest way to get your production queues, rider ingestion, and show teams live.
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function Onboarding() {
                   {ONBOARDING.deployment.private.label}
                 </h3>
                 <p className="mt-2 text-[14px] leading-[1.55] text-[var(--ink-soft)]">
-                  The same platform deployed inside your own infrastructure — your cloud, VPC or on-prem — for electrical contractors with strict security mandates. Application, takeoff and pricing data never leave your environment, and the platform subscription stays the same.
+                  The same platform deployed inside your own infrastructure — your cloud, VPC, or on-prem — for live entertainment producers and agencies with strict corporate data governance. Artist riders, labor contracts, and settlement records never leave your environment.
                 </p>
               </div>
             </div>

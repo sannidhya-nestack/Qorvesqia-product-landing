@@ -277,7 +277,7 @@ export default function WalkthroughCalendar() {
           <div className="relative isolate flex min-h-[380px] flex-col justify-end overflow-hidden bg-[var(--navy)] p-6 text-white sm:min-h-[420px] sm:p-10">
             <Image
               src="/assets/switchgear-qa-inspection.jpg"
-              alt="Electrical engineers reviewing live systems"
+              alt="Live event production team coordinating show operations"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
               className="-z-10 object-cover object-[72%_center]"

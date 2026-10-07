@@ -5,8 +5,8 @@ import { PRODUCT } from "@/lib/product";
 const steps = [
   {
     step: "01",
-    title: "Read single-lines, panel schedules & spec tables",
-    desc: "OCR, layout detection and tabular extraction across electrical drawings, panelboards and equipment schedules.",
+    title: "Parse technical riders & stage plots",
+    desc: "OCR, layout detection and tabular extraction across artist technical riders, input lists, and venue specification packets.",
     model: "Mistral",
     provider: "Document AI",
     icon: "/icons/intelligence/mistralai.svg",
@@ -14,8 +14,8 @@ const steps = [
   },
   {
     step: "02",
-    title: "Classify electrical sheets & symbols",
-    desc: "Power, lighting, low-voltage, riser and detail sheets categorized; device and fixture symbols detected.",
+    title: "Classify stage departments & backline",
+    desc: "Audio splits, lighting universes, video wall tile rasters, and stage rigging requirements categorized automatically.",
     model: "Open Weights",
     provider: "Inference Providers",
     icon: "https://cdn.simpleicons.org/meta/172a81",
@@ -23,8 +23,8 @@ const steps = [
   },
   {
     step: "03",
-    title: "Hold the whole electrical system in context",
-    desc: "Cross-sheet references, riser diagrams, panel schedules and revision addenda kept in active context.",
+    title: "Hold the whole production in context",
+    desc: "Multi-stage timelines, load-in constraints, curfew windows, and talent hospitality requirements kept in active context.",
     model: "Gemini",
     provider: "Gemini API",
     icon: "https://cdn.simpleicons.org/google/172a81",
@@ -32,8 +32,8 @@ const steps = [
   },
   {
     step: "04",
-    title: "Extract assemblies & map NECA labor units",
-    desc: "Structured takeoffs, conduit run calculations and NECA Manual of Labor Units assembly mapping.",
+    title: "Map union crew rules & gear manifests",
+    desc: "IATSE collective bargaining rules, meal penalty windows, rest turnarounds, and cross-rental equipment manifests.",
     model: "OpenAI",
     provider: "Responses API",
     icon: "/icons/intelligence/openai.svg",
@@ -41,8 +41,8 @@ const steps = [
   },
   {
     step: "05",
-    title: "Draft code-audit and safety compliance notes",
-    desc: "Proposed designs and field installations checked against NEC 2026, NFPA 70E arc flash, and OSHA 1926 Subpart K.",
+    title: "Draft safety & municipal compliance sign-offs",
+    desc: "Evaluates ANSI E1.21 wind action plans, high-rigger fall protection protocols, and local fire marshal flame-spread certificates.",
     model: "Claude",
     provider: "Messages API",
     icon: "https://cdn.simpleicons.org/anthropic/172a81",
@@ -50,8 +50,8 @@ const steps = [
   },
   {
     step: "06",
-    title: "Validate dependency graph & route review queue",
-    desc: "Topological upstream-to-downstream verification; low-confidence items held for estimator or engineer signoff.",
+    title: "Validate run-of-show timing & curfew risk",
+    desc: "Real-time timeline analysis; flags schedule drift and downstream curfew breaches for immediate production manager sign-off.",
     model: "DeepSeek",
     provider: "DeepSeek API",
     badgeText: "DS",
@@ -65,10 +65,10 @@ export default function Intelligence() {
         <div className="max-w-[48ch]">
           <span className="eyebrow">Intelligence</span>
           <h2 className="h-section mt-5 text-[clamp(1.9rem,3.6vw,3rem)] text-[var(--ink)]">
-            A multi-model pipeline for complex electrical systems.
+            A specialized AI pipeline for live entertainment & production.
           </h2>
           <p className="mt-6 text-[16px] leading-[1.6] text-[var(--ink-soft)]">
-            Electrical drawings, one-lines, and spec books are too dense for one generic model. {PRODUCT.name} routes each document to the right specialist — extracting circuits, flagging code risks, and generating defensible estimates with full audit lineage.
+            Technical riders, venue CAD stage plots, union contracts, and gear manifests are too specialized for generic models. {PRODUCT.name} routes each document to dedicated intelligence agents — parsing stage requirements, auditing rigging safety, and keeping live show schedules on time.
           </p>
         </div>
 

@@ -11,14 +11,14 @@ export default function Products() {
       <div className="mx-auto max-w-[1240px] px-5 py-20 sm:px-8 sm:py-28">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
           <div className="max-w-[48ch] lg:max-w-none">
-            <span className="eyebrow">Add-ons</span>
+            <span className="eyebrow">Specialized Engines</span>
             <h2 className="h-section mt-5 text-[clamp(1.9rem,3.6vw,3rem)] text-[var(--ink)]">
-              Add the hardware your electrical workflow needs.
+              Modular software extensions for high-stakes productions.
             </h2>
           </div>
           <p className="max-w-[54ch] text-[16px] leading-[1.6] text-[var(--ink-soft)]">
-            Optional field testing and continuous telemetry devices that stream live electrical readings into your workspace —
-            validating field megger and torque tests against digital dependency graphs and streaming switchgear thermal data under NFPA 70B.
+            Optional domain-specific automation engines that plug directly into your live production workspace —
+            accelerating technical rider ingestion and dynamically recalculating run-of-show timing to protect municipal sound curfews.
           </p>
         </div>
 
@@ -75,9 +75,7 @@ export default function Products() {
         </div>
 
         <p className="mt-12 max-w-[72ch] border-t border-[var(--line)] pt-8 text-[13px] leading-[1.6] text-[var(--ink-mute)]">
-          Hardware, installation, and integration are not included in the standard subscription.
-          Additional charges apply based on the hardware selected, integration modules required, and
-          implementation scope.
+          Specialized engines and custom enterprise connectors can be enabled with your workspace plan or configured during onboarding.
         </p>
       </div>
     </section>

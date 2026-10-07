@@ -2,7 +2,6 @@ import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Platform from "@/components/sections/Platform";
 import WalkthroughCalendar from "@/components/sections/WalkthroughCalendar";
-import Suite from "@/components/sections/Suite";
 import Modules from "@/components/sections/Modules";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Intelligence from "@/components/sections/Intelligence";
@@ -22,7 +21,6 @@ export default function Home() {
       <Hero />
       <Platform />
       <WalkthroughCalendar />
-      <Suite />
       <Modules />
       <HowItWorks />
       <Intelligence />

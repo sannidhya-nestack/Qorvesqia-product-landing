@@ -62,12 +62,10 @@ export default function Connectivity() {
       <div className="mx-auto max-w-[900px] px-5 text-center sm:px-8">
         <span className="eyebrow">Connectivity</span>
         <h2 className="h-section mt-5 text-[clamp(1.9rem,3.6vw,3rem)] text-[var(--ink)]">
-          Your electrical stack, connected.
+          Your production stack, connected.
         </h2>
         <p className="mx-auto mt-6 max-w-[62ch] text-[16px] leading-[1.65] text-[var(--ink-soft)]">
-          Procore, Primavera P6, Acumatica, SharePoint, Fieldwire — and the rest of what your jobsites already run
-          on. 15 integrations across the electrical project pipeline, every one reading the tool’s own
-          public API.
+          Vectorworks, Shoflo, LASSO, Rentman, Flex Rental Solutions, Google Workspace, and Dropbox — connecting the exact operational tools your touring crews, festival producers, and venue teams use every day.
         </p>
       </div>
 

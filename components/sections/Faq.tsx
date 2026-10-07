@@ -8,43 +8,43 @@ import { PRODUCT } from "@/lib/product";
 const faqs = [
   {
     q: `How much does ${PRODUCT.name} cost?`,
-    a: `${PRODUCT.name} pricing depends on your team size, number of active projects, service workload, and the capabilities you need. Plans can be structured around estimating, project execution, field operations, commissioning, service, or a broader company-wide rollout. Contact our team for pricing based on how your electrical contracting business actually operates.`,
+    a: `${PRODUCT.name} pricing is structured as a transparent, flat monthly subscription based on your production volume, active tour legs, or festival scale — with zero per-seat penalties. Contact our team to configure a plan aligned with your live production operations.`,
   },
   {
     q: `Do we need to replace our current software to use ${PRODUCT.name}?`,
-    a: `No. ${PRODUCT.name} is designed to work alongside the systems your teams already depend on. You can introduce it into high-friction workflows first—such as bid review, field reporting, service dispatch, or maintenance intelligence—without replacing your entire technology stack at once.`,
+    a: `No. ${PRODUCT.name} integrates alongside Vectorworks, Shoflo, LASSO, Rentman, Flex, and your accounting ERP. You can connect it into high-friction workflows first — such as technical rider parsing, union crew dispatch, live cue timing, or post-show settlement.`,
   },
   {
     q: `How quickly can our team start getting value from the platform?`,
-    a: `You do not need to digitize every historical project before getting started. ${PRODUCT.name} can begin with current bids, active projects, service work, or selected electrical assets. The fastest value usually comes from reducing repetitive document review, manual reporting, missed changes, dispatch delays, and time spent searching for project information.`,
+    a: `You can begin on your next active show or upcoming tour leg. Ingesting artist riders and generating bills-of-quantities takes minutes, and master production timelines can be imported directly into the live command center.`,
   },
   {
-    q: `Is ${PRODUCT.name} suitable for both project work and electrical service operations?`,
-    a: `Yes. ${PRODUCT.name} is designed for electrical contractors that perform construction, retrofit, commissioning, maintenance, or recurring service work. This means the same platform can support the project lifecycle while also helping service teams manage customer requests, technician dispatch, asset history, and maintenance priorities.`,
+    q: `Is ${PRODUCT.name} suitable for both single festivals and multi-city touring productions?`,
+    a: `Yes. ${PRODUCT.name} supports multi-stage music festivals, arena concert tours, corporate galas, and theatrical productions. Touring legs can inherit master show files while adapting local union crew rules and venue dock schedules for each city.`,
   },
   {
-    q: `What business problems should we expect ${PRODUCT.name} to reduce?`,
-    a: `${PRODUCT.name} is designed around problems electrical contractors regularly lose time or margin to: slow bid-document review, missed scope, disconnected field reports, delayed material decisions, unrecorded change exposure, difficult project-document searches, reactive maintenance, and inefficient service dispatch. The goal is to help your team act earlier with better information rather than discover issues after they have already affected cost or schedule.`,
+    q: `What operational bottlenecks does ${PRODUCT.name} eliminate?`,
+    a: `${PRODUCT.name} eliminates last-minute rider surprises, loading dock traffic jams, IATSE union meal penalties and rest violations, live cue timing drift, and delayed financial settlement with artists and promoters.`,
   },
   {
-    q: `Can ${PRODUCT.name} work with our existing drawings, PDFs, reports, and field documents?`,
-    a: `Yes. The platform is designed to work with the documents electrical contractors already receive and create, including drawings, specifications, bid packages, RFIs, equipment information, field reports, photos, commissioning records, maintenance records, and service documentation. Your team should not need to manually recreate useful project information simply to make it usable.`,
+    q: `Can ${PRODUCT.name} work with our existing PDF riders, CAD stage plots, and input lists?`,
+    a: `Yes. Our document intelligence pipeline ingests multi-page artist contracts, PDF technical riders, Excel audio patch lists, lighting universe sheets, and venue specification packets without manual data re-entry.`,
   },
   {
-    q: `Will AI make decisions without our estimator, project manager, or technician approving them?`,
-    a: `No. ${PRODUCT.name} is intended to assist experienced electrical professionals, not replace their authority. Important recommendations—such as estimated scope changes, compliance concerns, maintenance actions, or readiness decisions—can be reviewed against the underlying evidence before your team approves or acts on them.`,
+    q: `Will AI make show-critical decisions without human confirmation?`,
+    a: `No. ${PRODUCT.name} assists production managers, technical directors, and stage managers rather than replacing them. Every schedule adjustment, crew call, risk mitigation, and settlement invoice requires human review and sign-off.`,
   },
   {
-    q: `How does ${PRODUCT.name} help protect project margins?`,
-    a: `${PRODUCT.name} helps connect estimated labor, installed progress, actual field hours, material requirements, changes, and project risk. This gives project teams earlier visibility into productivity problems, unpriced scope changes, material delays, and other conditions that can erode margin while there is still time to respond.`,
+    q: `How does ${PRODUCT.name} protect against union penalties and curfew fines?`,
+    a: `Built-in IATSE and collective bargaining guardrails monitor crew call times to alert coordinators before 5-hour meal windows or 8-hour rest periods are breached. During live shows, the delay mitigation engine recalculates run-of-show timing in real time to protect strict municipal noise curfew cutoffs.`,
   },
   {
-    q: `Can smaller electrical contractors use ${PRODUCT.name}, or is it only for large enterprises?`,
-    a: `${PRODUCT.name} can be introduced gradually. A smaller contractor may start with estimating, field reporting, or service operations, while a larger electrical contractor may use the platform across multiple projects, branches, field teams, and maintenance programs. The subscription can be aligned with the scale of the operation rather than requiring every capability from day one.`,
+    q: `Can independent production companies use ${PRODUCT.name}, or is it only for major tours?`,
+    a: `${PRODUCT.name} scales from boutique production companies and regional AV providers to global touring promoters and festival organizers. Plans can be tailored to the exact volume of your live operations.`,
   },
   {
-    q: `How difficult is onboarding for our office and field teams?`,
-    a: `${PRODUCT.name} is designed around familiar electrical workflows rather than generic enterprise-software processes. Office teams can work from documents, drawings, project records, and operational alerts, while field users can capture information through practical workflows such as voice reporting, photos, work updates, and service records. Rollout can be phased by team or workflow to reduce disruption.`,
+    q: `How difficult is onboarding for production managers and touring crew?`,
+    a: `${PRODUCT.name} is designed around intuitive live event workflows — digital call sheets, run-of-show timelines, dock arrival boards, and settlement sheets. Office and touring teams can be trained and running within days.`,
   },
 ];
 
@@ -61,7 +61,7 @@ export default function Faq() {
               Questions before you subscribe
             </h2>
             <p className="mt-6 max-w-[46ch] text-[15.5px] leading-[1.6] text-[var(--ink-soft)]">
-              Pricing, NECA labor, BIM, switchgear risk and NFPA 70B service — answered for electrical contractors evaluating {PRODUCT.name}.
+              Rider intake, union overtime, curfew protection, and tour settlements — answered for live event production teams evaluating {PRODUCT.name}.
             </p>
             <Link href="#contact" className="btn btn-ghost mt-8">
               Book a demo <ArrowRight size={15} strokeWidth={2} />

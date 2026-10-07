@@ -137,7 +137,7 @@ export default function Footer() {
                   href="#products"
                   className="text-[14px] text-[var(--ink-soft)] transition-colors hover:text-[var(--ink)]"
                 >
-                  Hardware add-ons
+                  Software extensions
                 </Link>
               </li>
               <li>
@@ -155,7 +155,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-[14px] text-[var(--ink-soft)] transition-colors hover:text-[var(--ink)]"
                 >
-                  Electrical AI agents
+                  Entertainment AI agents
                 </a>
               </li>
             </ul>
@@ -164,7 +164,7 @@ export default function Footer() {
 
         {/* Bottom Sub-bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[var(--line)] pt-8 text-[13px] text-[var(--ink-mute)] sm:flex-row">
-          <p>© 2026 Cirqentra AI</p>
+          <p>© 2026 {PRODUCT.name}</p>
           <p className="font-medium text-[var(--ink-soft)]">Built with Nestack</p>
           <button
             type="button"
