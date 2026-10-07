@@ -106,6 +106,117 @@ function ShellIcon({
   return <Icon x={x} y={y} size={size} strokeWidth={stroke} />;
 }
 
+/** Pixel-perfect navbar icons matching user reference */
+function TopbarActionIcon({
+  name,
+  cx,
+  cy,
+  size,
+  stroke,
+}: {
+  name: "mail" | "chat" | "alerts";
+  cx: number;
+  cy: number;
+  size: number;
+  stroke: number;
+}) {
+  const x = cx - size / 2;
+  const y = cy - size / 2;
+
+  if (name === "mail") {
+    return (
+      <svg
+        x={x}
+        y={y}
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={stroke}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="2.5" y="4.5" width="19" height="15" rx="3.5" />
+        <path d="M3.5 6.5 L11.2 12.2 C 11.68 12.58 12.32 12.58 12.8 12.2 L20.5 6.5" />
+      </svg>
+    );
+  }
+
+  if (name === "chat") {
+    return (
+      <svg
+        x={x}
+        y={y}
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={stroke}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 3.5h16a2.5 2.5 0 0 1 2.5 2.5v9a2.5 2.5 0 0 1-2.5 2.5h-7.5l-4.2 3.8v-3.8H4A2.5 2.5 0 0 1 1.5 15V6A2.5 2.5 0 0 1 4 3.5z" />
+        <line x1="6.5" y1="8" x2="13" y2="8" />
+        <line x1="6.5" y1="11.5" x2="17.5" y2="11.5" />
+        <line x1="6.5" y1="15" x2="12" y2="15" />
+      </svg>
+    );
+  }
+
+  // alerts (bell with round clapper)
+  return (
+    <svg
+      x={x}
+      y={y}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={stroke}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 2.5c-3.6 0-6.2 3-6.2 7.5v3.5L4 16.5v.5h16v-.5l-1.8-3V10c0-4.5-2.6-7.5-6.2-7.5z" />
+      <path d="M10.2 19.5a2 2 0 0 0 3.6 0" />
+    </svg>
+  );
+}
+
+function SearchIcon({
+  cx,
+  cy,
+  size,
+  stroke,
+}: {
+  cx: number;
+  cy: number;
+  size: number;
+  stroke: number;
+}) {
+  const x = cx - size / 2;
+  const y = cy - size / 2;
+  return (
+    <svg
+      x={x}
+      y={y}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={stroke}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <line x1="16.5" y1="16.5" x2="21.5" y2="21.5" />
+    </svg>
+  );
+}
+
 /**
  * The dashboard screenshot rebuilt as a composite: the app chrome (sidebar +
  * topbar) is live vector markup, the content area is the cropped screenshot.
@@ -247,14 +358,11 @@ export default function DashboardShell({
           strokeWidth={SEARCH.border}
         />
         <g style={{ color: color.searchIcon }}>
-          <ShellIcon
-            icon={Search}
-            iconSrc={SEARCH.icon.src}
+          <SearchIcon
             cx={SEARCH.icon.cx}
             cy={SEARCH.icon.cy}
             size={SEARCH.icon.size}
             stroke={SEARCH.icon.stroke}
-            maskId={`${uid}s`}
           />
         </g>
         <Txt
@@ -266,18 +374,16 @@ export default function DashboardShell({
           {SHELL.searchPlaceholder}
         </Txt>
 
-        {/* Topbar action icons */}
+        {/* Topbar action icons matching user reference */}
         <g style={{ color: color.topbarIcon }}>
-          {SHELL_TOPBAR_ICONS.map((t, i) => (
-            <ShellIcon
+          {SHELL_TOPBAR_ICONS.map((t) => (
+            <TopbarActionIcon
               key={t.key}
-              icon={t.icon}
-              iconSrc={t.iconSrc}
+              name={t.key}
               cx={t.cx}
               cy={t.cy}
               size={SHELL.topbarIcon.size}
               stroke={SHELL.topbarIcon.stroke}
-              maskId={`${uid}t${i}`}
             />
           ))}
         </g>

@@ -75,7 +75,7 @@ export const SHELL = {
     },
     placeholder: { x: 465, y: 32 },
   },
-  topbarIcon: { size: 16, stroke: 1.35 },
+  topbarIcon: { size: 17, stroke: 1.5 },
   type: {
     wordmark: { size: 15.5, weight: 700, sx: 0.98 },
     title: { size: 14.5, weight: 600, sx: 0.98 },
@@ -123,10 +123,10 @@ export const SHELL_NAV: ShellNavItem[] = [
   { key: "settlement", label: "Settlement & Closeout", icon: Receipt },
 ];
 
-export const SHELL_TOPBAR_ICONS: { key: string; icon: LucideIcon; iconSrc?: string; cx: number; cy: number }[] = [
-  { key: "mail", icon: Mail, iconSrc: "/assets/shell-icons/envelope.svg", cx: 852, cy: 28 },
-  { key: "chat", icon: MessageSquare, iconSrc: "/assets/shell-icons/comment-alt.svg", cx: 896, cy: 28 },
-  { key: "alerts", icon: Bell, iconSrc: "/assets/shell-icons/bell.svg", cx: 939, cy: 28 },
+export const SHELL_TOPBAR_ICONS: { key: "mail" | "chat" | "alerts"; cx: number; cy: number }[] = [
+  { key: "mail", cx: 856, cy: 28 },
+  { key: "chat", cx: 896, cy: 28 },
+  { key: "alerts", cx: 936, cy: 28 },
 ];
 
 /** Shell props for screenshot page `page`: highlights the nav item whose label is `title`. */
