@@ -8,11 +8,11 @@ import { PRODUCT } from "@/lib/product";
 
 // Authentic event production & live entertainment jobsite photography
 const strip = [
-  { src: "/assets/switchboard-programming.jpg", label: "Lighting & Show Control Programming" },
-  { src: "/assets/overhead-cable-install.jpg", label: "Stage Truss & Rigging Installation" },
-  { src: "/assets/switchgear-qa-inspection.jpg", label: "Front-of-House Audio & Lighting QA" },
-  { src: "/assets/control-panel-assembly.jpg", label: "Backline & Audio Rack Patching" },
-  { src: "/assets/warehouse-material-staging.jpg", label: "AVL Gear Staging & Truck Loading" },
+  { src: "/assets/concert-lighting-truss.jpg", label: "Arena Lighting Rig & Truss Grid" },
+  { src: "/assets/live-foh-soundcheck.jpg", label: "Festival Stage Soundcheck & FOH Audio" },
+  { src: "/assets/audio-lighting-console.jpg", label: "Digital Audio & DMX Lighting Console" },
+  { src: "/assets/stage-band-performance.jpg", label: "Live Stage Performance & Backline Monitoring" },
+  { src: "/assets/pyro-stage-production.jpg", label: "SFX Pyrotechnics & Flame FX Show Ops" },
 ];
 
 export default function Hero() {

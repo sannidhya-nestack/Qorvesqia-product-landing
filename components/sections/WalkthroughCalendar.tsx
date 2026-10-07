@@ -276,7 +276,7 @@ export default function WalkthroughCalendar() {
           {/* ================= LEFT COLUMN ================= */}
           <div className="relative isolate flex min-h-[380px] flex-col justify-end overflow-hidden bg-[var(--navy)] p-6 text-white sm:min-h-[420px] sm:p-10">
             <Image
-              src="/assets/switchgear-qa-inspection.jpg"
+              src="/assets/concert-lighting-truss.jpg"
               alt="Live event production team coordinating show operations"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
