@@ -5,9 +5,9 @@ import { shellFor } from "@/lib/shell";
 const pins: CalloutPin[] = [
   {
     id: "p1",
-    label: "Production Readiness Index",
-    anchor: { x: 0.44, y: 0.20 },
-    label_at: { x: 0.52, y: 0.16 },
+    label: "Readiness Index",
+    anchor: { x: 0.415, y: 0.225 },
+    label_at: { x: 0.34, y: 0.33 },
     side: "right",
     description:
       "Weighted composite readiness score tracking technical, crew, vendor, schedule, safety, and financial milestones toward show start.",
@@ -15,18 +15,18 @@ const pins: CalloutPin[] = [
   {
     id: "p2",
     label: "Run-of-Show Pulse",
-    anchor: { x: 0.75, y: 0.45 },
-    label_at: { x: 0.62, y: 0.45 },
-    side: "left",
+    anchor: { x: 0.69, y: 0.375 },
+    label_at: { x: 0.775, y: 0.375 },
+    side: "right",
     description:
       "Live minute-by-minute cue variance tracking across soundcheck, doors, headliner sets, and curfew windows with department cue tallies.",
   },
   {
     id: "p3",
-    label: "AI Risk & Recommendation Queue",
-    anchor: { x: 0.52, y: 0.82 },
-    label_at: { x: 0.38, y: 0.82 },
-    side: "left",
+    label: "AI Risk Queue",
+    anchor: { x: 0.535, y: 0.725 },
+    label_at: { x: 0.615, y: 0.725 },
+    side: "right",
     description:
       "Surfaces high-impact budget overruns and operational blockers — such as overnight rigging labor or missing vendor confirmations.",
   },

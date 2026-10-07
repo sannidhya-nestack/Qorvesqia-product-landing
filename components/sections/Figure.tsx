@@ -175,103 +175,12 @@ export default function Figure({
           </span>
         )}
         {callouts && callouts.length > 0 && (
-          <div className="absolute inset-0 pointer-events-auto">
-            {callouts.map((c) => {
-              const labelSide = c.side ?? "left";
-              const labelX =
-                c.label_at?.x ??
-                (labelSide === "left"
-                  ? Math.max(0, c.anchor.x - 0.09)
-                  : Math.min(1, c.anchor.x + 0.09));
-              const labelY = c.label_at?.y ?? c.anchor.y;
-              const lineLeft = Math.min(c.anchor.x, labelX) * 100;
-              const lineWidth = Math.abs(c.anchor.x - labelX) * 100;
-              const isOpen = openPin === c.id;
-
-              return (
-                <span key={c.id} className="block" data-callout>
-                  <span
-                    className="pin-line"
-                    style={{
-                      left: `${lineLeft}%`,
-                      top: `${c.anchor.y * 100}%`,
-                      width: `${lineWidth}%`,
-                    }}
-                    aria-hidden
-                  />
-                  <span
-                    className="pin"
-                    style={{
-                      left: `${c.anchor.x * 100}%`,
-                      top: `${c.anchor.y * 100}%`,
-                    }}
-                    aria-hidden
-                  />
-                  <button
-                    type="button"
-                    className="pin-label"
-                    style={{
-                      left: `${labelX * 100}%`,
-                      top: `${labelY * 100}%`,
-                      transform:
-                        labelSide === "left"
-                          ? "translate(-100%, -50%)"
-                          : "translate(0, -50%)",
-                      cursor: c.description ? "pointer" : "default",
-                    }}
-                    aria-expanded={isOpen}
-                    aria-label={c.description ? `${c.label} — show description` : c.label}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (!c.description) return;
-                      setOpenPin(isOpen ? null : c.id);
-                    }}
-                  >
-                    <span>{c.label}</span>
-                    {c.description && (
-                      <span aria-hidden className="pin-label-toggle">
-                        {isOpen ? "–" : "+"}
-                      </span>
-                    )}
-                  </button>
-
-                  {isOpen && c.description && (
-                    <span
-                      role="dialog"
-                      aria-label={c.label}
-                      onClick={(e) => e.stopPropagation()}
-                      style={{
-                        position: "absolute",
-                        left: `${labelX * 100}%`,
-                        top: `calc(${labelY * 100}% + 1.25rem)`,
-                        transform: labelSide === "left" ? "translateX(-75%)" : "translateX(0)",
-                        zIndex: 40,
-                        width: "19rem",
-                        maxWidth: "85vw",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "0.35rem",
-                        padding: "0.85rem 1rem",
-                        borderRadius: "12px",
-                        border: "1.5px solid #fde047",
-                        background: "#fef9c3",
-                        boxShadow: "0 16px 36px -8px rgba(113, 63, 18, 0.25)",
-                        textAlign: "left",
-                      }}
-                    >
-                      <span className="font-bold text-[12px] uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
-                        <span className="h-2 w-2 rounded-full bg-amber-500" />
-                        {c.label}
-                      </span>
-                      <span className="text-[13px] leading-relaxed text-amber-950">
-                        {c.description}
-                      </span>
-                    </span>
-                  )}
-                </span>
-              );
-            })}
-          </div>
+          <CalloutsOverlay
+            callouts={callouts}
+            openPin={openPin}
+            setOpenPin={setOpenPin}
+            isZoom={false}
+          />
         )}
       </div>
     </figure>
@@ -333,108 +242,153 @@ export default function Figure({
                 />
               )}
               {callouts && callouts.length > 0 && (
-                <div className="absolute inset-0 pointer-events-auto">
-                  {callouts.map((c) => {
-                    const labelSide = c.side ?? "left";
-                    const labelX =
-                      c.label_at?.x ??
-                      (labelSide === "left"
-                        ? Math.max(0, c.anchor.x - 0.09)
-                        : Math.min(1, c.anchor.x + 0.09));
-                    const labelY = c.label_at?.y ?? c.anchor.y;
-                    const lineLeft = Math.min(c.anchor.x, labelX) * 100;
-                    const lineWidth = Math.abs(c.anchor.x - labelX) * 100;
-                    const isOpen = openPin === c.id;
-
-                    return (
-                      <span key={`zoom-${c.id}`} className="block" data-callout>
-                        <span
-                          className="pin-line"
-                          style={{
-                            left: `${lineLeft}%`,
-                            top: `${c.anchor.y * 100}%`,
-                            width: `${lineWidth}%`,
-                          }}
-                          aria-hidden
-                        />
-                        <span
-                          className="pin"
-                          style={{
-                            left: `${c.anchor.x * 100}%`,
-                            top: `${c.anchor.y * 100}%`,
-                          }}
-                          aria-hidden
-                        />
-                        <button
-                          type="button"
-                          className="pin-label"
-                          style={{
-                            left: `${labelX * 100}%`,
-                            top: `${labelY * 100}%`,
-                            transform:
-                              labelSide === "left"
-                                ? "translate(-100%, -50%)"
-                                : "translate(0, -50%)",
-                            cursor: c.description ? "pointer" : "default",
-                          }}
-                          aria-expanded={isOpen}
-                          aria-label={c.description ? `${c.label} — show description` : c.label}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            if (!c.description) return;
-                            setOpenPin(isOpen ? null : c.id);
-                          }}
-                        >
-                          <span>{c.label}</span>
-                          {c.description && (
-                            <span aria-hidden className="pin-label-toggle">
-                              {isOpen ? "–" : "+"}
-                            </span>
-                          )}
-                        </button>
-
-                        {isOpen && c.description && (
-                          <span
-                            role="dialog"
-                            aria-label={c.label}
-                            onClick={(e) => e.stopPropagation()}
-                            style={{
-                              position: "absolute",
-                              left: `${labelX * 100}%`,
-                              top: `calc(${labelY * 100}% + 1.25rem)`,
-                              transform: labelSide === "left" ? "translateX(-75%)" : "translateX(0)",
-                              zIndex: 40,
-                              width: "22rem",
-                              maxWidth: "85vw",
-                              display: "flex",
-                              flexDirection: "column",
-                              gap: "0.35rem",
-                              padding: "0.85rem 1rem",
-                              borderRadius: "12px",
-                              border: "1.5px solid #fde047",
-                              background: "#fef9c3",
-                              boxShadow: "0 16px 36px -8px rgba(113, 63, 18, 0.25)",
-                              textAlign: "left",
-                            }}
-                          >
-                            <span className="font-bold text-[12px] uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
-                              <span className="h-2 w-2 rounded-full bg-amber-500" />
-                              {c.label}
-                            </span>
-                            <span className="text-[13px] leading-relaxed text-amber-950">
-                              {c.description}
-                            </span>
-                          </span>
-                        )}
-                      </span>
-                    );
-                  })}
-                </div>
+                <CalloutsOverlay
+                  callouts={callouts}
+                  openPin={openPin}
+                  setOpenPin={setOpenPin}
+                  isZoom={true}
+                />
               )}
             </div>
           </div>
         </div>
       )}
     </>
+  );
+}
+
+function CalloutsOverlay({
+  callouts,
+  openPin,
+  setOpenPin,
+  isZoom = false,
+}: {
+  callouts: CalloutPin[];
+  openPin: string | null;
+  setOpenPin: (id: string | null) => void;
+  isZoom?: boolean;
+}) {
+  return (
+    <div className="absolute inset-0 pointer-events-auto">
+      {/* SVG Leader Lines: connect anchor dot precisely to the pill button */}
+      <svg
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        style={{ zIndex: 12 }}
+        aria-hidden
+      >
+        {callouts.map((c) => {
+          const labelSide = c.side ?? "left";
+          const labelX =
+            c.label_at?.x ??
+            (labelSide === "left"
+              ? Math.max(0, c.anchor.x - 0.09)
+              : Math.min(1, c.anchor.x + 0.09));
+          const labelY = c.label_at?.y ?? c.anchor.y;
+
+          return (
+            <line
+              key={`line-${c.id}`}
+              x1={`${c.anchor.x * 100}%`}
+              y1={`${c.anchor.y * 100}%`}
+              x2={`${labelX * 100}%`}
+              y2={`${labelY * 100}%`}
+              stroke="#eab308"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              opacity="0.95"
+            />
+          );
+        })}
+      </svg>
+
+      {/* Pins and Interactive Pill Labels */}
+      {callouts.map((c) => {
+        const labelSide = c.side ?? "left";
+        const labelX =
+          c.label_at?.x ??
+          (labelSide === "left"
+            ? Math.max(0, c.anchor.x - 0.09)
+            : Math.min(1, c.anchor.x + 0.09));
+        const labelY = c.label_at?.y ?? c.anchor.y;
+        const isOpen = openPin === c.id;
+
+        return (
+          <span key={c.id} className="block" data-callout>
+            {/* Target Dot directly on the feature */}
+            <span
+              className="pin"
+              style={{
+                left: `${c.anchor.x * 100}%`,
+                top: `${c.anchor.y * 100}%`,
+              }}
+              aria-hidden
+            />
+            {/* Clickable Pill Button */}
+            <button
+              type="button"
+              className="pin-label"
+              style={{
+                left: `${labelX * 100}%`,
+                top: `${labelY * 100}%`,
+                transform:
+                  labelSide === "left"
+                    ? "translate(-100%, -50%)"
+                    : "translate(0, -50%)",
+                cursor: c.description ? "pointer" : "default",
+              }}
+              aria-expanded={isOpen}
+              aria-label={c.description ? `${c.label} — show description` : c.label}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (!c.description) return;
+                setOpenPin(isOpen ? null : c.id);
+              }}
+            >
+              <span>{c.label}</span>
+              {c.description && (
+                <span aria-hidden className="pin-label-toggle">
+                  {isOpen ? "–" : "+"}
+                </span>
+              )}
+            </button>
+
+            {/* Explainer Popover Dialog */}
+            {isOpen && c.description && (
+              <span
+                role="dialog"
+                aria-label={c.label}
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  position: "absolute",
+                  left: `${labelX * 100}%`,
+                  top: `calc(${labelY * 100}% + 1.25rem)`,
+                  transform: labelSide === "left" ? "translateX(-75%)" : "translateX(0)",
+                  zIndex: 40,
+                  width: isZoom ? "22rem" : "19rem",
+                  maxWidth: "85vw",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.35rem",
+                  padding: "0.85rem 1rem",
+                  borderRadius: "12px",
+                  border: "1.5px solid #fde047",
+                  background: "#fef9c3",
+                  boxShadow: "0 16px 36px -8px rgba(113, 63, 18, 0.25)",
+                  textAlign: "left",
+                }}
+              >
+                <span className="font-bold text-[12px] uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
+                  <span className="h-2 w-2 rounded-full bg-amber-500" />
+                  {c.label}
+                </span>
+                <span className="text-[13px] leading-relaxed text-amber-950">
+                  {c.description}
+                </span>
+              </span>
+            )}
+          </span>
+        );
+      })}
+    </div>
   );
 }
