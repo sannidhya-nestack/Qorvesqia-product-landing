@@ -1,6 +1,6 @@
 import { useId } from "react";
 import Image from "next/image";
-import { Search, type LucideIcon } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 import { PRODUCT } from "@/lib/product";
 import { SHELL, SHELL_NAV, SHELL_TOPBAR_ICONS } from "@/lib/shell";
 

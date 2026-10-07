@@ -35,20 +35,36 @@ export default function Integrations() {
               </li>
             </ul>
 
-            <p className="mt-auto pt-10 font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-mute)]">
+            <a
+              href={PRODUCT.agentsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto pt-10 inline-flex items-center gap-1.5 font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-mute)] transition-colors hover:text-[var(--brand)]"
+            >
               Catalogued in playbook ENT043
-            </p>
+              <ArrowUpRight size={13} strokeWidth={2} />
+            </a>
           </div>
 
           {/* Right Column (Dark Navy) */}
           <div className="flex flex-col bg-[var(--navy)] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-10 lg:py-24 lg:pl-14">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <p className="font-display text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45">
+              <a
+                href={PRODUCT.agentsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45 transition-colors hover:text-white"
+              >
                 Sister platform — Nestack Agent Care
-              </p>
-              <p className="font-display text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45">
+              </a>
+              <a
+                href={PRODUCT.agentsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45 transition-colors hover:text-white"
+              >
                 P 43 · Entertainment Playbooks
-              </p>
+              </a>
             </div>
 
             <h2 className="mt-10 max-w-[20ch] font-display text-[clamp(1.6rem,3.4vw,2.35rem)] font-bold uppercase leading-[1.12] tracking-[0.01em] text-white">
@@ -110,19 +126,27 @@ export default function Integrations() {
               <ArrowUpRight size={16} strokeWidth={2.2} />
             </a>
 
-            <p className="mt-auto pt-10 font-display text-[10px] font-semibold uppercase tracking-[0.14em] text-white/40">
+            <a
+              href={PRODUCT.agentsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto pt-10 font-display text-[10px] font-semibold uppercase tracking-[0.14em] text-white/40 transition-colors hover:text-white/70"
+            >
               Live entertainment agents are catalogued in playbook ENT043.
-            </p>
+            </a>
           </div>
         </div>
 
         {/* Center Connecting Arrow Icon */}
-        <div
-          className="pointer-events-none absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 lg:grid lg:h-11 lg:w-11 lg:place-items-center lg:bg-[var(--brand)] lg:shadow-[0_8px_24px_-8px_rgba(23,42,129,0.8)]"
-          aria-hidden="true"
+        <a
+          href={PRODUCT.agentsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-105 lg:grid lg:h-11 lg:w-11 lg:place-items-center lg:bg-[var(--brand)] lg:shadow-[0_8px_24px_-8px_rgba(23,42,129,0.8)]"
+          aria-label="Open the Media & Entertainment playbook"
         >
           <ArrowRight size={18} strokeWidth={2.4} className="text-white" />
-        </div>
+        </a>
       </div>
 
       <p className="mx-auto max-w-[1240px] px-5 py-6 text-[12px] leading-[1.55] text-[var(--ink-mute)] sm:px-8">

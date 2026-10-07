@@ -8,5 +8,5 @@ export const PRODUCT = {
   tagline: "Live event production operating system from brief intake to final settlement",
   industry: "Entertainment",
   subIndustry: "Event Production & Live Entertainment",
-  agentsUrl: "https://nestackagents.com/industries/entertainment",
+  agentsUrl: "https://nestackagents.com/industries/media-entertainment",
 };
