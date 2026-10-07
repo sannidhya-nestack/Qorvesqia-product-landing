@@ -143,7 +143,7 @@ export default function Modules() {
         <SliderDots targetId="modules-main" count={mainModules.length} size="lg" />
 
         {/* Main Modules */}
-        <div id="modules-main" className="slider-lg mt-16 gap-6 space-y-16 sm:space-y-24">
+        <div id="modules-main" className="slider-lg mt-10 gap-8 lg:mt-16 lg:space-y-24">
           {mainModules.map((m, i) => {
             const isEven = i % 2 === 1;
             return (

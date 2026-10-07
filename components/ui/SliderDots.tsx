@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 type SliderDotsProps = {
   targetId: string;
@@ -23,28 +23,44 @@ export default function SliderDots({
 
     const onScroll = () => {
       const scrollLeft = el.scrollLeft;
-      const width = el.clientWidth;
-      if (width <= 0) return;
-      const idx = Math.min(count - 1, Math.max(0, Math.round(scrollLeft / (width * 0.85))));
-      setActiveIndex(idx);
+      const children = Array.from(el.children) as HTMLElement[];
+      if (!children.length) return;
+
+      let closestIdx = 0;
+      let minDiff = Infinity;
+      children.forEach((child, i) => {
+        const diff = Math.abs(child.offsetLeft - el.offsetLeft - scrollLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIdx = i;
+        }
+      });
+      setActiveIndex(closestIdx);
     };
 
     el.addEventListener("scroll", onScroll, { passive: true });
+    // Check initial position
+    onScroll();
     return () => el.removeEventListener("scroll", onScroll);
-  }, [targetId, count]);
+  }, [targetId]);
 
-  const scrollTo = (index: number) => {
-    const el = document.getElementById(targetId);
-    if (!el) return;
-    const children = el.children;
-    if (children[index]) {
-      (children[index] as HTMLElement).scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-        block: "nearest",
-      });
-    }
-  };
+  const scrollTo = useCallback(
+    (index: number) => {
+      const el = document.getElementById(targetId);
+      if (!el) return;
+      const children = Array.from(el.children) as HTMLElement[];
+      const target = children[index];
+      if (target) {
+        const targetLeft = target.offsetLeft - el.offsetLeft;
+        el.scrollTo({
+          left: targetLeft,
+          behavior: "smooth",
+        });
+        setActiveIndex(index);
+      }
+    },
+    [targetId]
+  );
 
   if (count <= 1) return null;
 
