@@ -352,7 +352,8 @@ export default function DashboardShell({
           y={SEARCH.y + SEARCH.border / 2}
           width={SEARCH.w - SEARCH.border}
           height={SEARCH.h - SEARCH.border}
-          rx={SEARCH.r - SEARCH.border / 2}
+          rx={SEARCH.r}
+          ry={SEARCH.r}
           fill={color.header}
           stroke={color.searchBorder}
           strokeWidth={SEARCH.border}

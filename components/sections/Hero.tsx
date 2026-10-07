@@ -72,13 +72,7 @@ export default function Hero() {
           ref={content}
           className="mx-auto flex w-full max-w-[1240px] flex-1 flex-col justify-center px-5 pt-16 sm:px-8 sm:pt-20"
         >
-          <div className="reveal flex flex-wrap items-center gap-3">
-            <span className="text-[13px] font-medium text-[var(--ink-mute)]">
-              AI-native operations platform for concerts, festivals, tours & live entertainment
-            </span>
-          </div>
-
-          <h1 className="reveal-2 mt-7 h-display text-[var(--ink)] text-[clamp(1.7rem,6.5vw,5.3rem)]">
+          <h1 className="reveal-2 mt-2 h-display text-[var(--ink)] text-[clamp(1.7rem,6.5vw,5.3rem)]">
             The Connected Operating System for
             <br />
             <span className="text-[var(--brand)]">Live Event Production</span>
