@@ -439,44 +439,68 @@
     border-block-end-width: 0;
   }
   .slider-dots-sm {
-    display: flex;
+    display: flex !important;
   }
-  .slider-dots-sm + .slider-sm {
-    margin-top: 0;
+}
+@media (min-width: 640px) {
+  .slider-dots-sm {
+    display: none !important;
   }
 }
 
 @media (max-width: 1023px) {
   .slider-lg {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
-    grid-auto-columns: min(90vw, 760px);
-    grid-auto-flow: column;
-    display: grid;
-    overflow-x: auto;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scroll-padding: 0 1rem;
-    gap: 1.75rem;
+    gap: 1.25rem !important;
     padding-bottom: 1.25rem;
+    scrollbar-width: none;
+  }
+  .slider-lg::-webkit-scrollbar {
+    display: none;
   }
   .slider-lg > * {
+    flex: 0 0 88vw !important;
+    min-width: 88vw !important;
+    max-width: 88vw !important;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     margin-top: 0 !important;
-    margin-block-start: 0 !important;
+    margin-bottom: 0 !important;
   }
   .slider-dots-lg {
-    display: flex;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
   }
-  .slider-dots-lg + .slider-lg {
-    margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .slider-lg {
+    display: block !important;
+    overflow-x: visible !important;
+  }
+  .slider-lg > * {
+    flex: none !important;
+    min-width: auto !important;
+    max-width: 100% !important;
+  }
+  .slider-dots-lg {
+    display: none !important;
   }
 }
 
 .slider-dots {
   align-items: center;
   gap: 8px;
-  margin: 32px 0 16px;
-  display: none;
+  display: flex;
 }
 .slider-dots button {
   position: relative;
@@ -494,6 +518,9 @@
   content: "";
   position: absolute;
   inset: -10px -4px;
+}
+.slider-dots button:hover {
+  background: var(--ink-mute);
 }
 .slider-dots button.is-active {
   background: var(--brand);

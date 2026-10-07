@@ -140,8 +140,6 @@ export default function Modules() {
           </p>
         </div>
 
-        <SliderDots targetId="modules-main" count={mainModules.length} size="lg" />
-
         {/* Main Modules */}
         <div id="modules-main" className="slider-lg mt-10 gap-8 lg:mt-16 lg:space-y-24">
           {mainModules.map((m, i) => {
@@ -189,6 +187,14 @@ export default function Modules() {
               </article>
             );
           })}
+        </div>
+
+        {/* Bottom dots for mobile view */}
+        <div className="lg:hidden mt-8 flex flex-col items-center gap-2">
+          <SliderDots targetId="modules-main" count={mainModules.length} size="lg" />
+          <span className="text-[11.5px] text-[var(--ink-mute)]">
+            Tap dot to view module
+          </span>
         </div>
       </div>
     </section>
