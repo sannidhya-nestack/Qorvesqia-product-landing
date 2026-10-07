@@ -51,7 +51,7 @@ export default function Compliance() {
 
         <div className="mt-16 border-t border-[var(--line)] pt-8">
           <p className="max-w-[1000px] text-[15px] leading-relaxed text-[var(--ink-soft)]">
-            These are standards the platform is built to support inside your workflows — obligations that fall on you as the license. They are not certifications held by us, and support in the product is not a substitute for your own counsel or compliance officer.
+            These are standards the platform is built to support inside your workflows — obligations that fall on you as the licensee. They are not certifications held by us, and support in the product is not a substitute for your own counsel or compliance officer.
           </p>
         </div>
       </div>

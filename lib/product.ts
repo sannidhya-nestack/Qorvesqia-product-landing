@@ -3,7 +3,7 @@
    never a hard-coded product name. */
 
 export const PRODUCT = {
-  insubId: "insub_E0012",
+  insubId: "insub_ENT043",
   name: "Qorvesqia AI",
   tagline: "Live event production operating system from brief intake to final settlement",
   industry: "Entertainment",
