@@ -95,6 +95,7 @@ export default function Intelligence() {
                         alt=""
                         width={14}
                         height={14}
+                        unoptimized
                         className={`h-3.5 w-3.5 object-contain ${
                           s.isSimpleIcon ? "" : "opacity-80"
                         }`}

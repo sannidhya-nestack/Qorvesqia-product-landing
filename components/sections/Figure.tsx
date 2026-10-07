@@ -164,6 +164,7 @@ export default function Figure({
             width={width}
             height={height}
             priority={priority}
+            unoptimized
             className="block h-auto w-full"
             sizes="(min-width: 1024px) 900px, 100vw"
           />
@@ -326,6 +327,7 @@ export default function Figure({
                   alt={alt}
                   width={width}
                   height={height}
+                  unoptimized
                   className="block h-auto w-full"
                   sizes="95vw"
                 />

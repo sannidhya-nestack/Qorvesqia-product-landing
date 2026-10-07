@@ -233,7 +233,7 @@ export default function DashboardShell({
   contentSrc,
   priority = false,
   sizes,
-  unoptimized = false,
+  unoptimized = true,
 }: DashboardShellProps) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
   const bodyTop = topbarH + divider;
