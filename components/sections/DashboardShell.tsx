@@ -230,19 +230,67 @@ export default function DashboardShell({
           );
         })}
 
-        {/* Topbar Page Title */}
+        {/* Topbar */}
         <Txt x={SHELL.title.x} y={SHELL.title.y} type="title" fill={color.title}>
           {title}
         </Txt>
 
-        {/* Topbar Search, Icons & Avatar Strip (Image 3) */}
+        {/* Search bar */}
+        <rect
+          x={SEARCH.x + SEARCH.border / 2}
+          y={SEARCH.y + SEARCH.border / 2}
+          width={SEARCH.w - SEARCH.border}
+          height={SEARCH.h - SEARCH.border}
+          rx={SEARCH.r - SEARCH.border / 2}
+          fill={color.header}
+          stroke={color.searchBorder}
+          strokeWidth={SEARCH.border}
+        />
+        <g style={{ color: color.searchIcon }}>
+          <ShellIcon
+            icon={Search}
+            iconSrc={SEARCH.icon.src}
+            cx={SEARCH.icon.cx}
+            cy={SEARCH.icon.cy}
+            size={SEARCH.icon.size}
+            stroke={SEARCH.icon.stroke}
+            maskId={`${uid}s`}
+          />
+        </g>
+        <Txt
+          x={SEARCH.placeholder.x}
+          y={SEARCH.placeholder.y}
+          type="placeholder"
+          fill={color.placeholder}
+        >
+          {SHELL.searchPlaceholder}
+        </Txt>
+
+        {/* Topbar action icons */}
+        <g style={{ color: color.topbarIcon }}>
+          {SHELL_TOPBAR_ICONS.map((t, i) => (
+            <ShellIcon
+              key={t.key}
+              icon={t.icon}
+              iconSrc={t.iconSrc}
+              cx={t.cx}
+              cy={t.cy}
+              size={SHELL.topbarIcon.size}
+              stroke={SHELL.topbarIcon.stroke}
+              maskId={`${uid}t${i}`}
+            />
+          ))}
+        </g>
+
+        {/* Circular avatar */}
         <image
-          href={SHELL.topbarSrc ?? "/assets/shell/topbar.png"}
-          x={S.w - 735}
-          y={0}
-          width={735}
-          height={topbarH + divider}
-          preserveAspectRatio="none"
+          href={SHELL.avatarSrc}
+          x={A.x}
+          y={A.y}
+          width={A.size}
+          height={A.size}
+          clipPath={`url(#${uid}av)`}
+          preserveAspectRatio="xMidYMid slice"
         />
       </svg>
     </div>
