@@ -1,0 +1,133 @@
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { PRODUCT } from "@/lib/product";
+
+export default function Integrations() {
+  return (
+    <section id="integrations" className="border-b border-[var(--line)] bg-[var(--paper)]">
+      <div className="relative mx-auto max-w-[1240px]">
+        <div className="grid lg:grid-cols-2">
+          {/* Left Column (Light) */}
+          <div className="flex flex-col bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24 lg:pr-14">
+            <p className="font-display text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--ink-mute)]">
+              {PRODUCT.name} ships
+            </p>
+            <h2 className="mt-6 max-w-[22ch] text-[clamp(1.85rem,3.8vw,2.65rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-[var(--ink)]">
+              Electrical extraction agents, in production, reading real engineering single-lines.
+            </h2>
+            <p className="mt-6 max-w-[44ch] text-[15px] leading-[1.65] text-[var(--ink-soft)]">
+              Structured records from plan sets, riser diagrams, panel schedules and submittals — live in your BIM, estimating,
+              and ERP targets through documented API integrations, with each agent mapped to the
+              electrical modules your team already runs.
+            </p>
+
+            <ul className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+              <li className="flex items-start gap-3.5 py-4">
+                <span className="mt-1.5 h-2 w-2 shrink-0 bg-[var(--brand)]" aria-hidden="true" />
+                <span className="text-[15px] font-medium leading-snug text-[var(--ink)]">
+                  Single-line diagram extraction and electrical takeoff agents
+                </span>
+              </li>
+              <li className="flex items-start gap-3.5 py-4">
+                <span className="mt-1.5 h-2 w-2 shrink-0 bg-[var(--brand)]" aria-hidden="true" />
+                <span className="text-[15px] font-medium leading-snug text-[var(--ink)]">
+                  Voice-to-field reporting and NEC code-audit agents
+                </span>
+              </li>
+            </ul>
+
+            <p className="mt-auto pt-10 font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-mute)]">
+              Both catalogued in playbook 2.07
+            </p>
+          </div>
+
+          {/* Right Column (Dark Navy) */}
+          <div className="flex flex-col bg-[var(--navy)] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-10 lg:py-24 lg:pl-14">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p className="font-display text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45">
+                Sister platform — Nestack Agent Care
+              </p>
+              <p className="font-display text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45">
+                P 07 · 23 playbooks
+              </p>
+            </div>
+
+            <h2 className="mt-10 max-w-[20ch] font-display text-[clamp(1.6rem,3.4vw,2.35rem)] font-bold uppercase leading-[1.12] tracking-[0.01em] text-white">
+              Your{" "}
+              <span className="inline-block border border-[var(--accent)] px-2 py-0.5 text-[var(--accent)]">
+                electrical
+              </span>{" "}
+              AI agents, run like production systems.
+            </h2>
+
+            <p className="mt-6 max-w-[44ch] text-[15px] leading-[1.65] text-white/65">
+              Telemetry, evaluations, guardrails, human review and incident response — pinned to the
+              Electrical Contracting playbook so takeoff, dependency checks, and dispatch agents stay reliable from intake
+              through turnover.
+            </p>
+
+            <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
+              <div>
+                <dt className="font-display text-[clamp(1.5rem,3vw,2rem)] font-bold leading-none text-[var(--accent)]">
+                  38
+                </dt>
+                <dd className="mt-2 text-[10px] font-medium uppercase leading-snug tracking-[0.06em] text-white/55">
+                  Failure modes catalogued
+                </dd>
+              </div>
+              <div>
+                <dt className="font-display text-[clamp(1.5rem,3vw,2rem)] font-bold leading-none text-[var(--accent)]">
+                  38
+                </dt>
+                <dd className="mt-2 text-[10px] font-medium uppercase leading-snug tracking-[0.06em] text-white/55">
+                  Evaluation sets
+                </dd>
+              </div>
+              <div>
+                <dt className="font-display text-[clamp(1.5rem,3vw,2rem)] font-bold leading-none text-[var(--accent)]">
+                  1,950+
+                </dt>
+                <dd className="mt-2 text-[10px] font-medium uppercase leading-snug tracking-[0.06em] text-white/55">
+                  Baseline eval cases
+                </dd>
+              </div>
+              <div>
+                <dt className="font-display text-[clamp(1.5rem,3vw,2rem)] font-bold leading-none text-[var(--accent)]">
+                  24/7
+                </dt>
+                <dd className="mt-2 text-[10px] font-medium uppercase leading-snug tracking-[0.06em] text-white/55">
+                  Agent monitoring
+                </dd>
+              </div>
+            </dl>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-light mt-10 h-12 w-full max-w-[360px] px-6 text-[13px] sm:w-auto"
+              href={PRODUCT.agentsUrl}
+            >
+              Open the Construction playbook
+              <ArrowUpRight size={16} strokeWidth={2.2} />
+            </a>
+
+            <p className="mt-auto pt-10 font-display text-[10px] font-semibold uppercase tracking-[0.14em] text-white/40">
+              Electrical & construction agents are catalogued in playbook 2.07 of 23.
+            </p>
+          </div>
+        </div>
+
+        {/* Center Connecting Arrow Icon */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 lg:grid lg:h-11 lg:w-11 lg:place-items-center lg:bg-[var(--brand)] lg:shadow-[0_8px_24px_-8px_rgba(23,42,129,0.8)]"
+          aria-hidden="true"
+        >
+          <ArrowRight size={18} strokeWidth={2.4} className="text-white" />
+        </div>
+      </div>
+
+      <p className="mx-auto max-w-[1240px] px-5 py-6 text-[12px] leading-[1.55] text-[var(--ink-mute)] sm:px-8">
+        Tool names and marks belong to their respective owners. No endorsement or partnership implied.
+      </p>
+    </section>
+  );
+}
