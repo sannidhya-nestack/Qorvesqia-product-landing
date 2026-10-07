@@ -67,7 +67,7 @@ export default function Platform() {
             {/* KPI 1: AI Confidence Score */}
             <div className="flex flex-col">
               <div className="text-[clamp(2.2rem,3.6vw,3.4rem)] font-bold tracking-tight text-[#00e5ff] font-mono-ui leading-none drop-shadow-[0_0_14px_rgba(0,229,255,0.25)]">
-                9.8 / 10
+                9.9 / 10
               </div>
               <h4 className="mt-4 text-[15.5px] font-bold text-white tracking-tight">
                 AI Confidence Score
@@ -77,42 +77,42 @@ export default function Platform() {
               </p>
             </div>
 
-            {/* KPI 2: Estimator Time Saved */}
+            {/* KPI 2: Production Hours Saved */}
             <div className="flex flex-col">
               <div className="text-[clamp(2.2rem,3.6vw,3.4rem)] font-bold tracking-tight text-[#00e5ff] font-mono-ui leading-none drop-shadow-[0_0_14px_rgba(0,229,255,0.25)]">
-                38.5h
+                44.5h
               </div>
               <h4 className="mt-4 text-[15.5px] font-bold text-white tracking-tight">
-                Estimator Time Saved
+                Production Hours Saved
               </h4>
               <p className="mt-1.5 text-[13px] leading-[1.55] text-white/65">
-                Average takeoff and scope review hours saved per bid
+                Average takeoff and scope review hours saved per show
               </p>
             </div>
 
             {/* KPI 3: Workflow Efficiency Gain */}
             <div className="flex flex-col">
               <div className="text-[clamp(2.2rem,3.6vw,3.4rem)] font-bold tracking-tight text-[#00e5ff] font-mono-ui leading-none drop-shadow-[0_0_14px_rgba(0,229,255,0.25)]">
-                5.2x
+                6.2x
               </div>
               <h4 className="mt-4 text-[15.5px] font-bold text-white tracking-tight">
                 Workflow Efficiency Gain
               </h4>
               <p className="mt-1.5 text-[13px] leading-[1.55] text-white/65">
-                End-to-end turnaround acceleration from RFP to proposal
+                End-to-end turnaround acceleration from rider intake to show call
               </p>
             </div>
 
-            {/* KPI 4: Bid Submission Capacity */}
+            {/* KPI 4: Show Delivery Capacity */}
             <div className="flex flex-col">
               <div className="text-[clamp(2.2rem,3.6vw,3.4rem)] font-bold tracking-tight text-[#00e5ff] font-mono-ui leading-none drop-shadow-[0_0_14px_rgba(0,229,255,0.25)]">
-                3.6x
+                4.5x
               </div>
               <h4 className="mt-4 text-[15.5px] font-bold text-white tracking-tight">
-                Bid Submission Capacity
+                Show Delivery Capacity
               </h4>
               <p className="mt-1.5 text-[13px] leading-[1.55] text-white/65">
-                More qualified commercial packages submitted per team
+                More qualified production packages &amp; stages delivered per crew
               </p>
             </div>
           </div>
