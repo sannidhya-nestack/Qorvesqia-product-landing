@@ -11,6 +11,8 @@ const display = Orbitron({
 const body = Instrument_Sans({ variable: "--font-body", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://qorvesqia.nestack.ai"),
+  alternates: { canonical: "/" },
   title:
     "Qorvesqia AI — Live Event Production Operating System from Brief to Settlement.",
   description:
